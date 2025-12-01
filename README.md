@@ -1,1 +1,1 @@
-# gerenciador-de-jogos
+# Intruções de compilação e execução
