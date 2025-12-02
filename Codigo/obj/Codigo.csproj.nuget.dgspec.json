@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\arthu\\OneDrive\\Documentos\\GitHub\\gerenciador-de-jogos\\codigo\\Codigo.csproj": {}
+    "C:\\Users\\arthu\\OneDrive\\Documentos\\GitHub\\gerenciador-de-jogos\\Codigo\\Codigo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\arthu\\OneDrive\\Documentos\\GitHub\\gerenciador-de-jogos\\codigo\\Codigo.csproj": {
+    "C:\\Users\\arthu\\OneDrive\\Documentos\\GitHub\\gerenciador-de-jogos\\Codigo\\Codigo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arthu\\OneDrive\\Documentos\\GitHub\\gerenciador-de-jogos\\codigo\\Codigo.csproj",
+        "projectUniqueName": "C:\\Users\\arthu\\OneDrive\\Documentos\\GitHub\\gerenciador-de-jogos\\Codigo\\Codigo.csproj",
         "projectName": "Codigo",
-        "projectPath": "C:\\Users\\arthu\\OneDrive\\Documentos\\GitHub\\gerenciador-de-jogos\\codigo\\Codigo.csproj",
+        "projectPath": "C:\\Users\\arthu\\OneDrive\\Documentos\\GitHub\\gerenciador-de-jogos\\Codigo\\Codigo.csproj",
         "packagesPath": "C:\\Users\\arthu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arthu\\OneDrive\\Documentos\\GitHub\\gerenciador-de-jogos\\codigo\\obj\\",
+        "outputPath": "C:\\Users\\arthu\\OneDrive\\Documentos\\GitHub\\gerenciador-de-jogos\\Codigo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\arthu\\AppData\\Roaming\\NuGet\\NuGet.Config"
