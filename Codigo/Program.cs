@@ -1,5 +1,5 @@
 ﻿using Classes;  
-
+using Dados;
 
 class Programa
 {
@@ -16,8 +16,9 @@ class Programa
             Console.WriteLine("=======MENU PRINCIPAL=======");
             Console.WriteLine("1 - Logar");
             Console.WriteLine("2 - Cadastrar");
-            Console.WriteLine("3 - Sair");
+            Console.WriteLine("0 - Sair");
             Console.WriteLine("============================");
+            Console.Write("Opção: ");
 
             if (!int.TryParse(Console.ReadLine(), out opt))
                 continue;
@@ -49,7 +50,7 @@ class Programa
                 case 2:
                     Pessoa.CadastrarPessoa();
                     break;
-                case 3:
+                case 0:
 
                     return;   // SAINDO DO PROGRAMA
 
@@ -80,7 +81,8 @@ class Programa
             Console.WriteLine("2 - Adicionar Jogo");
             Console.WriteLine("3 - Marcar Conquista");
             Console.WriteLine("4 - Comparar com outro Usuário");
-            Console.WriteLine("5 - Voltar");
+            Console.WriteLine("5 - Comparar jogo com outro Usuario");
+            Console.WriteLine("0 - Voltar");
             Console.WriteLine("==============================");
             Console.Write("Opção: ");
 
@@ -103,9 +105,13 @@ class Programa
 
                 case 4:
                     usuario.CompararUsuario();
-                    break;  
+                    break; 
 
                 case 5:
+                    usuario.CompararJogoComUsuario();
+                    break;
+
+                case 0:
                     return; //VOLTA AO MENU PRINCIPAL
 
                 default:
@@ -125,7 +131,7 @@ class Programa
             Console.Clear();
             Console.WriteLine("====== MENU ADMIN ======");
             Console.WriteLine("1 - Cadastrar Jogo e suas Conquistas");
-            Console.WriteLine("2 - Voltar");
+            Console.WriteLine("0 - Voltar");
             Console.WriteLine("========================");
             Console.Write("Opção: ");
 
@@ -139,7 +145,7 @@ class Programa
                     Console.ReadKey();
                     break;
 
-                case 2:
+                case 0:
                     return;  //VOLTA AO MENU PRINCIPAL
 
                 default:

@@ -1,6 +1,6 @@
 namespace Classes
 {
-    using System.Text.Json;
+    using Dados;
     class Pessoa
     {
         public int id;
@@ -15,7 +15,7 @@ namespace Classes
             this.senha = senha;
         }
 
-        public static Pessoa Logar()
+        public static Pessoa? Logar()
         {
             string nome = "";
             while (string.IsNullOrWhiteSpace(nome))
@@ -52,14 +52,14 @@ namespace Classes
             }
 
             // Verifica login do admin
-            Admin admin = Database.Dados.admins
+            Admin? admin = Database.Dados.admins
                 .FirstOrDefault(a => a.nome == nome && a.senha == senha);
 
             if (admin != null)
                 return admin;
 
             // Verifica login do usuário
-            Usuario usuario = Database.Dados.usuarios
+            Usuario? usuario = Database.Dados.usuarios
                 .FirstOrDefault(u => u.nome == nome && u.senha == senha);
 
             if (usuario != null)
@@ -269,8 +269,8 @@ namespace Classes
 
     class Usuario : Pessoa
     {
-        public int Nivel { get;  set; }
-        public int Experiencia { get;  set; }
+        public int Nivel { get; set; }
+        public int Experiencia { get; set; }
         public BibliotecaUsuario biblioteca;
 
 
@@ -296,7 +296,7 @@ namespace Classes
 
             foreach (var jogo in biblioteca.jogos)
             {
-                Console.WriteLine($"\n--- {jogo.nome} ---");
+                Console.WriteLine($"\n--- {jogo.nome} --- Gênero: {jogo.genero}");
 
                 if (jogo.conquistas.Count == 0)
                 {
@@ -370,7 +370,7 @@ namespace Classes
             string nome = Console.ReadLine() ?? string.Empty;
 
             Jogo? jogoSelecionado = Database.Dados.jogos
-                .FirstOrDefault(j => j.nome.Equals(nome, StringComparison.OrdinalIgnoreCase));
+                .FirstOrDefault(j => j.nome != null && j.nome.Equals(nome, StringComparison.OrdinalIgnoreCase));
 
             if (jogoSelecionado == null)
             {
@@ -391,7 +391,6 @@ namespace Classes
                 id = jogoSelecionado.id,
                 nome = jogoSelecionado.nome,
                 genero = jogoSelecionado.genero,
-                plataforma = jogoSelecionado.plataforma,
                 conquistas = new List<Conquista>()
             };
 
@@ -424,7 +423,7 @@ namespace Classes
 
             foreach (var jogo in biblioteca.jogos)
             {
-                Console.WriteLine($"\n--- {jogo.nome} ---");
+                Console.WriteLine($"\n--- {jogo.nome} --- Gênero: {jogo.genero}");
 
                 if (jogo.conquistas.Count == 0)
                 {
@@ -436,7 +435,7 @@ namespace Classes
                 {
                     Console.WriteLine($"  > {c.nome} | XP: {c.XP} | Dif: {c.dificuldade} | Status: {c.status}");
                 }
-                Console.WriteLine("\n");
+                
             }
 
             Console.WriteLine("===== MARCAR CONQUISTA =====");
@@ -454,7 +453,7 @@ namespace Classes
         }
 
 
-        public void MarcarConquista(string Nomejogo, string Nomeconquista) // Ambas pesquisas
+        private void MarcarConquista(string Nomejogo, string Nomeconquista)
         {
             Jogo? jogo = biblioteca.BuscarJogoPorNome(Nomejogo);
 
@@ -478,8 +477,16 @@ namespace Classes
             int J = biblioteca.jogos[I].conquistas
             .FindIndex(c => c.nome != null && c.nome.Equals(Nomeconquista, StringComparison.OrdinalIgnoreCase));
 
-            biblioteca.jogos[I].conquistas[J].Desbloquear();
-            Console.WriteLine($"Conquista marcada como desbloqueada!");
+            if (biblioteca.jogos[I].conquistas[J].status == "Desbloqueada")
+            {
+                Console.WriteLine("Essa conquista já está desbloqueada!");
+                return;
+            }
+            else
+            {
+                biblioteca.jogos[I].conquistas[J].Desbloquear();
+                Console.WriteLine("Conquista marcada como desbloqueada!");
+            }
 
             Experiencia += conquista.XP;
             AtualizarNivel();
@@ -497,8 +504,16 @@ namespace Classes
             Console.Clear();
             Console.WriteLine("===== COMPARAR USUÁRIOS =====");
 
-            Console.Write("Digite o nome do usuário para comparar: ");
-            string nome = Console.ReadLine() ?? string.Empty;
+            string nome;
+            do
+            {
+                Console.Write("Digite o nome do usuário para comparar: ");
+                nome = Console.ReadLine()?.Trim() ?? "";
+
+                if (string.IsNullOrEmpty(nome))
+                    Console.WriteLine("Você precisa digitar um nome!");
+            }
+            while (string.IsNullOrEmpty(nome));
 
             var outroUsuario = Database.Dados.usuarios
             .FirstOrDefault(u => u.nome.Equals(nome, StringComparison.OrdinalIgnoreCase));
@@ -525,6 +540,99 @@ namespace Classes
             Console.ReadKey();
         }
 
+        public void CompararJogoComUsuario()
+        {
+            Console.Clear();
+            Console.WriteLine("===== COMPARAR JOGO ENTRE USUÁRIOS =====");
+
+            string nome;
+            do
+            {
+                Console.Write("Digite o nome do usuário para comparar: ");
+                nome = Console.ReadLine()?.Trim() ?? "";
+
+                if (string.IsNullOrEmpty(nome))
+                    Console.WriteLine("Você precisa digitar um nome!");
+            }
+            while (string.IsNullOrEmpty(nome));
+
+            var outroUsuario = Database.Dados.usuarios
+                .FirstOrDefault(u => u.nome.Equals(nome, StringComparison.OrdinalIgnoreCase));
+
+            if (outroUsuario == null)
+            {
+                Console.WriteLine("Usuário não encontrado!");
+                Console.ReadKey();
+                return;
+            }
+
+            string nomeJogo;
+            do
+            {
+                Console.Write("Digite o nome do jogo para comparar: ");
+                nomeJogo = Console.ReadLine()?.Trim() ?? "";
+
+                if (string.IsNullOrEmpty(nomeJogo))
+                    Console.WriteLine("Você precisa digitar um jogo!");
+            }
+            while (string.IsNullOrEmpty(nomeJogo));
+
+            var meuJogo = this.biblioteca.jogos
+                .FirstOrDefault(j => j.nome.Equals(nomeJogo, StringComparison.OrdinalIgnoreCase));
+
+            var jogoOutro = outroUsuario.biblioteca.jogos
+                .FirstOrDefault(j => j.nome.Equals(nomeJogo, StringComparison.OrdinalIgnoreCase));
+
+            if (meuJogo == null && jogoOutro == null)
+            {
+                Console.WriteLine("Nenhum dos dois usuários possui esse jogo.");
+                Console.ReadKey();
+                return;
+            }
+            else if (meuJogo == null)
+            {
+                Console.WriteLine($"{this.nome} não possui o jogo, mas {outroUsuario.nome} possui.");
+                Console.ReadKey();
+                return;
+            }
+            else if (jogoOutro == null)
+            {
+                Console.WriteLine($"{outroUsuario.nome} não possui o jogo, mas {this.nome} possui.");
+                Console.ReadKey();
+                return;
+            }
+
+            int minhasDesbloqueadas = meuJogo.conquistas.Count(c => c.status == "Desbloqueada");
+            int minhasTotal = meuJogo.conquistas.Count;
+
+            int outrasDesbloqueadas = jogoOutro.conquistas.Count(c => c.status == "Desbloqueada");
+            int outrasTotal = jogoOutro.conquistas.Count;
+
+            int meuXP = meuJogo.conquistas
+                .Where(c => c.status == "Desbloqueada")
+                .Sum(c => c.XP);
+
+            int outroXP = jogoOutro.conquistas
+                .Where(c => c.status == "Desbloqueada")
+                .Sum(c => c.XP);
+
+            double meuProgresso = (double)minhasDesbloqueadas / minhasTotal * 100;
+            double outroProgresso = (double)outrasDesbloqueadas / outrasTotal * 100;
+
+            Console.WriteLine($"\nComparando o jogo '{meuJogo.nome}' entre {this.nome} e {outroUsuario.nome}:");
+
+            Console.WriteLine($"\n--- PROGRESSO NO JOGO ---");
+            Console.WriteLine($"{this.nome}: {minhasDesbloqueadas}/{minhasTotal} conquistas ({meuProgresso:F1}%)");
+            Console.WriteLine($"{outroUsuario.nome}: {outrasDesbloqueadas}/{outrasTotal} conquistas ({outroProgresso:F1}%)");
+
+            Console.WriteLine($"\n--- XP OBTIDO NO JOGO ---");
+            Console.WriteLine($"{this.nome}: {meuXP} XP");
+            Console.WriteLine($"{outroUsuario.nome}: {outroXP} XP");
+
+            Console.WriteLine("\nAperte qualquer tecla para continuar...");
+            Console.ReadKey();
+        }
+
     }
 
     class Jogo
@@ -532,7 +640,6 @@ namespace Classes
         public int id;
         public string? nome;
         public string? genero;
-        public string? plataforma;
 
         public List<Conquista> conquistas = new List<Conquista>();
         public Jogo() { }
@@ -592,44 +699,7 @@ namespace Classes
 
     }
 
-    class BancoDeDados
-    {
-        public List<Admin> admins { get; set; } = new();
-        public List<Usuario> usuarios { get; set; } = new();
-        public List<Jogo> jogos { get; set; } = new();
-    }
-
-    static class Database
-    {
-        public static BancoDeDados Dados { get; private set; } = new BancoDeDados();
-        private static string caminho = "dados.json";
-
-        public static JsonSerializerOptions options = new JsonSerializerOptions
-        {
-            WriteIndented = true,
-            IncludeFields = true
-        };
-
-        public static void Carregar()
-        {
-            if (File.Exists(caminho))
-            {
-                // Console.WriteLine("Passei aq");
-                string json = File.ReadAllText(caminho);
-                Dados = JsonSerializer.Deserialize<BancoDeDados>(json, options);
-            }
-            else
-            {
-                Salvar(); // CRIA ARQUIVO NOVO
-            }
-        }
-
-        public static void Salvar()
-        {
-            string json = JsonSerializer.Serialize(Dados, options);
-            File.WriteAllText(caminho, json);
-        }
-    }
+    
 
 
 

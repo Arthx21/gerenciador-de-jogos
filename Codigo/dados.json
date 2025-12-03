@@ -8,15 +8,14 @@
   ],
   "usuarios": [
     {
-      "Nivel": 2,
-      "Experiencia": 1500,
+      "Nivel": 3,
+      "Experiencia": 2010,
       "biblioteca": {
         "jogos": [
           {
             "id": 1,
             "nome": "Arc Raiders",
             "genero": "Extra\u00E7\u00E3o",
-            "plataforma": null,
             "conquistas": [
               {
                 "id": 1,
@@ -40,6 +39,132 @@
                 "status": "Desbloqueada"
               }
             ]
+          },
+          {
+            "id": 2,
+            "nome": "GTA 5",
+            "genero": "Mundo Aberto",
+            "conquistas": [
+              {
+                "id": 1,
+                "nome": "Acima da Lei",
+                "XP": 250,
+                "dificuldade": "F\u00E1cil",
+                "status": "Desbloqueada"
+              },
+              {
+                "id": 2,
+                "nome": "Batendo um Fio",
+                "XP": 325,
+                "dificuldade": "M\u00E9dio",
+                "status": "Bloqueada"
+              },
+              {
+                "id": 3,
+                "nome": "Ouro Puro, Baby",
+                "XP": 500,
+                "dificuldade": "Dif\u00EDcil",
+                "status": "Bloqueada"
+              },
+              {
+                "id": 4,
+                "nome": "Turista de San Andreas",
+                "XP": 150,
+                "dificuldade": "F\u00E1cil",
+                "status": "Bloqueada"
+              },
+              {
+                "id": 5,
+                "nome": "Carreira Criminal",
+                "XP": 1000,
+                "dificuldade": "Lend\u00E1ria",
+                "status": "Bloqueada"
+              },
+              {
+                "id": 6,
+                "nome": "Corra como o Vento",
+                "XP": 550,
+                "dificuldade": "Dif\u00EDcil",
+                "status": "Bloqueada"
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "nome": "Valorant",
+            "genero": "FPS T\u00E1tico",
+            "conquistas": [
+              {
+                "id": 1,
+                "nome": "Primeiro ACE",
+                "XP": 500,
+                "dificuldade": "M\u00E9dio",
+                "status": "Bloqueada"
+              },
+              {
+                "id": 2,
+                "nome": "Clutch 1v5",
+                "XP": 980,
+                "dificuldade": "Lend\u00E1ria",
+                "status": "Bloqueada"
+              },
+              {
+                "id": 3,
+                "nome": "10 Partidas Vencidas",
+                "XP": 260,
+                "dificuldade": "F\u00E1cil",
+                "status": "Desbloqueada"
+              },
+              {
+                "id": 4,
+                "nome": "100 Abates",
+                "XP": 400,
+                "dificuldade": "M\u00E9dio",
+                "status": "Bloqueada"
+              },
+              {
+                "id": 5,
+                "nome": "Especialista em Spike",
+                "XP": 520,
+                "dificuldade": "M\u00E9dio",
+                "status": "Bloqueada"
+              },
+              {
+                "id": 6,
+                "nome": "Mestre do Agente",
+                "XP": 780,
+                "dificuldade": "Dif\u00EDcil",
+                "status": "Bloqueada"
+              },
+              {
+                "id": 7,
+                "nome": "Perfei\u00E7\u00E3o",
+                "XP": 840,
+                "dificuldade": "Dif\u00EDcil",
+                "status": "Bloqueada"
+              },
+              {
+                "id": 8,
+                "nome": "2 ACEs na Mesma Partida",
+                "XP": 900,
+                "dificuldade": "Lend\u00E1ria",
+                "status": "Bloqueada"
+              },
+              {
+                "id": 9,
+                "nome": "Top Frag em 5 Partidas",
+                "XP": 620,
+                "dificuldade": "Dif\u00EDcil",
+                "status": "Bloqueada"
+              },
+              {
+                "id": 10,
+                "nome": "Sem Errar",
+                "XP": 200,
+                "dificuldade": "F\u00E1cil",
+                "status": "Bloqueada"
+              }
+            ]
           }
         ]
       },
@@ -49,14 +174,13 @@
     },
     {
       "Nivel": 1,
-      "Experiencia": 0,
+      "Experiencia": 500,
       "biblioteca": {
         "jogos": [
           {
             "id": 1,
             "nome": "Arc Raiders",
             "genero": "Extra\u00E7\u00E3o",
-            "plataforma": null,
             "conquistas": [
               {
                 "id": 1,
@@ -77,6 +201,83 @@
                 "nome": "Destrua 10 ARCS",
                 "XP": 500,
                 "dificuldade": "M\u00E9dio",
+                "status": "Desbloqueada"
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "nome": "Elden Ring",
+            "genero": "RPG Soulslike",
+            "conquistas": [
+              {
+                "id": 1,
+                "nome": "Elden Lord",
+                "XP": 1000,
+                "dificuldade": "Lend\u00E1ria",
+                "status": "Bloqueada"
+              },
+              {
+                "id": 2,
+                "nome": "Shardbearer Radahn",
+                "XP": 720,
+                "dificuldade": "Dif\u00EDcil",
+                "status": "Bloqueada"
+              },
+              {
+                "id": 3,
+                "nome": "Era das Estrelas",
+                "XP": 950,
+                "dificuldade": "Lend\u00E1ria",
+                "status": "Bloqueada"
+              },
+              {
+                "id": 4,
+                "nome": "Deus-Derrubado",
+                "XP": 680,
+                "dificuldade": "Dif\u00EDcil",
+                "status": "Bloqueada"
+              },
+              {
+                "id": 5,
+                "nome": "Shardbearer Godrick",
+                "XP": 500,
+                "dificuldade": "M\u00E9dio",
+                "status": "Bloqueada"
+              },
+              {
+                "id": 6,
+                "nome": "Shardbearer Malenia",
+                "XP": 990,
+                "dificuldade": "Lend\u00E1ria",
+                "status": "Bloqueada"
+              },
+              {
+                "id": 7,
+                "nome": "Armas ao M\u00E1ximo",
+                "XP": 430,
+                "dificuldade": "M\u00E9dio",
+                "status": "Bloqueada"
+              },
+              {
+                "id": 8,
+                "nome": "Primeira Grande Runa",
+                "XP": 350,
+                "dificuldade": "F\u00E1cil",
+                "status": "Bloqueada"
+              },
+              {
+                "id": 9,
+                "nome": "Senhor da Chama Fren\u00E9tica",
+                "XP": 890,
+                "dificuldade": "Lend\u00E1ria",
+                "status": "Bloqueada"
+              },
+              {
+                "id": 10,
+                "nome": "Rumo ao Trono",
+                "XP": 640,
+                "dificuldade": "Dif\u00EDcil",
                 "status": "Bloqueada"
               }
             ]
@@ -113,7 +314,6 @@
       "id": 1,
       "nome": "Arc Raiders",
       "genero": "Extra\u00E7\u00E3o",
-      "plataforma": null,
       "conquistas": [
         {
           "id": 1,
@@ -134,6 +334,363 @@
           "nome": "Destrua 10 ARCS",
           "XP": 500,
           "dificuldade": "M\u00E9dio",
+          "status": "Bloqueada"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "GTA 5",
+      "genero": "Mundo Aberto",
+      "conquistas": [
+        {
+          "id": 1,
+          "nome": "Acima da Lei",
+          "XP": 250,
+          "dificuldade": "F\u00E1cil",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 2,
+          "nome": "Batendo um Fio",
+          "XP": 325,
+          "dificuldade": "M\u00E9dio",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 3,
+          "nome": "Ouro Puro, Baby",
+          "XP": 500,
+          "dificuldade": "Dif\u00EDcil",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 4,
+          "nome": "Turista de San Andreas",
+          "XP": 150,
+          "dificuldade": "F\u00E1cil",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 5,
+          "nome": "Carreira Criminal",
+          "XP": 1000,
+          "dificuldade": "Lend\u00E1ria",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 6,
+          "nome": "Corra como o Vento",
+          "XP": 550,
+          "dificuldade": "Dif\u00EDcil",
+          "status": "Bloqueada"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nome": "Battlefield",
+      "genero": "FPS",
+      "conquistas": [
+        {
+          "id": 1,
+          "nome": "Primeiro Abate",
+          "XP": 150,
+          "dificuldade": "F\u00E1cil",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 2,
+          "nome": "Piloto de Elite",
+          "XP": 670,
+          "dificuldade": "Dif\u00EDcil",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 3,
+          "nome": "Especialista em Ve\u00EDculos",
+          "XP": 420,
+          "dificuldade": "M\u00E9dio",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 4,
+          "nome": "Her\u00F3i da Equipe",
+          "XP": 580,
+          "dificuldade": "M\u00E9dio",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 5,
+          "nome": "Lenda do Campo de Batalha",
+          "XP": 990,
+          "dificuldade": "Lend\u00E1ria",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 6,
+          "nome": "Demolidor",
+          "XP": 610,
+          "dificuldade": "Dif\u00EDcil",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 7,
+          "nome": "Sobrevivente",
+          "XP": 280,
+          "dificuldade": "F\u00E1cil",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 8,
+          "nome": "Mestre das Armas",
+          "XP": 760,
+          "dificuldade": "Dif\u00EDcil",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 9,
+          "nome": "Tempestade de A\u00E7o",
+          "XP": 870,
+          "dificuldade": "Lend\u00E1ria",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 10,
+          "nome": "Veterano de Guerra",
+          "XP": 350,
+          "dificuldade": "M\u00E9dio",
+          "status": "Bloqueada"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nome": "Valorant",
+      "genero": "FPS T\u00E1tico",
+      "conquistas": [
+        {
+          "id": 1,
+          "nome": "Primeiro ACE",
+          "XP": 500,
+          "dificuldade": "M\u00E9dio",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 2,
+          "nome": "Clutch 1v5",
+          "XP": 980,
+          "dificuldade": "Lend\u00E1ria",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 3,
+          "nome": "10 Partidas Vencidas",
+          "XP": 260,
+          "dificuldade": "F\u00E1cil",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 4,
+          "nome": "100 Abates",
+          "XP": 400,
+          "dificuldade": "M\u00E9dio",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 5,
+          "nome": "Especialista em Spike",
+          "XP": 520,
+          "dificuldade": "M\u00E9dio",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 6,
+          "nome": "Mestre do Agente",
+          "XP": 780,
+          "dificuldade": "Dif\u00EDcil",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 7,
+          "nome": "Perfei\u00E7\u00E3o",
+          "XP": 840,
+          "dificuldade": "Dif\u00EDcil",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 8,
+          "nome": "2 ACEs na Mesma Partida",
+          "XP": 900,
+          "dificuldade": "Lend\u00E1ria",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 9,
+          "nome": "Top Frag em 5 Partidas",
+          "XP": 620,
+          "dificuldade": "Dif\u00EDcil",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 10,
+          "nome": "Sem Errar",
+          "XP": 200,
+          "dificuldade": "F\u00E1cil",
+          "status": "Bloqueada"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "nome": "Elden Ring",
+      "genero": "RPG Soulslike",
+      "conquistas": [
+        {
+          "id": 1,
+          "nome": "Elden Lord",
+          "XP": 1000,
+          "dificuldade": "Lend\u00E1ria",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 2,
+          "nome": "Shardbearer Radahn",
+          "XP": 720,
+          "dificuldade": "Dif\u00EDcil",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 3,
+          "nome": "Era das Estrelas",
+          "XP": 950,
+          "dificuldade": "Lend\u00E1ria",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 4,
+          "nome": "Deus-Derrubado",
+          "XP": 680,
+          "dificuldade": "Dif\u00EDcil",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 5,
+          "nome": "Shardbearer Godrick",
+          "XP": 500,
+          "dificuldade": "M\u00E9dio",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 6,
+          "nome": "Shardbearer Malenia",
+          "XP": 990,
+          "dificuldade": "Lend\u00E1ria",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 7,
+          "nome": "Armas ao M\u00E1ximo",
+          "XP": 430,
+          "dificuldade": "M\u00E9dio",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 8,
+          "nome": "Primeira Grande Runa",
+          "XP": 350,
+          "dificuldade": "F\u00E1cil",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 9,
+          "nome": "Senhor da Chama Fren\u00E9tica",
+          "XP": 890,
+          "dificuldade": "Lend\u00E1ria",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 10,
+          "nome": "Rumo ao Trono",
+          "XP": 640,
+          "dificuldade": "Dif\u00EDcil",
+          "status": "Bloqueada"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "nome": "Minecraft",
+      "genero": "Sandbox",
+      "conquistas": [
+        {
+          "id": 1,
+          "nome": "Fazendo Invent\u00E1rio",
+          "XP": 120,
+          "dificuldade": "F\u00E1cil",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 2,
+          "nome": "Apanhando Madeira",
+          "XP": 70,
+          "dificuldade": "F\u00E1cil",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 3,
+          "nome": "Hora de Minerar",
+          "XP": 180,
+          "dificuldade": "F\u00E1cil",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 4,
+          "nome": "Assar P\u00E3o",
+          "XP": 200,
+          "dificuldade": "F\u00E1cil",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 5,
+          "nome": "Ao Infinito e Al\u00E9m",
+          "XP": 760,
+          "dificuldade": "Dif\u00EDcil",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 6,
+          "nome": "O Fim?",
+          "XP": 880,
+          "dificuldade": "Dif\u00EDcil",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 7,
+          "nome": "O Fim.",
+          "XP": 1000,
+          "dificuldade": "Lend\u00E1ria",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 8,
+          "nome": "Agricultor Pro",
+          "XP": 420,
+          "dificuldade": "M\u00E9dio",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 9,
+          "nome": "Chef da Cozinha",
+          "XP": 300,
+          "dificuldade": "M\u00E9dio",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 10,
+          "nome": "Her\u00F3i da Vila",
+          "XP": 900,
+          "dificuldade": "Lend\u00E1ria",
           "status": "Bloqueada"
         }
       ]
