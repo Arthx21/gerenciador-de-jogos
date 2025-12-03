@@ -7,6 +7,136 @@
     }
   ],
   "usuarios": [
-    
+    {
+      "Nivel": 2,
+      "Experiencia": 1500,
+      "biblioteca": {
+        "jogos": [
+          {
+            "id": 1,
+            "nome": "Arc Raiders",
+            "genero": "Extra\u00E7\u00E3o",
+            "plataforma": null,
+            "conquistas": [
+              {
+                "id": 1,
+                "nome": "Volte a Speranza",
+                "XP": 700,
+                "dificuldade": "M\u00E9dio",
+                "status": "Desbloqueada"
+              },
+              {
+                "id": 2,
+                "nome": "Morra pela primeira vez",
+                "XP": 300,
+                "dificuldade": "F\u00E1cil",
+                "status": "Desbloqueada"
+              },
+              {
+                "id": 3,
+                "nome": "Destrua 10 ARCS",
+                "XP": 500,
+                "dificuldade": "M\u00E9dio",
+                "status": "Desbloqueada"
+              }
+            ]
+          }
+        ]
+      },
+      "id": 1,
+      "nome": "arthur",
+      "senha": "123"
+    },
+    {
+      "Nivel": 1,
+      "Experiencia": 0,
+      "biblioteca": {
+        "jogos": [
+          {
+            "id": 1,
+            "nome": "Arc Raiders",
+            "genero": "Extra\u00E7\u00E3o",
+            "plataforma": null,
+            "conquistas": [
+              {
+                "id": 1,
+                "nome": "Volte a Speranza",
+                "XP": 700,
+                "dificuldade": "M\u00E9dio",
+                "status": "Bloqueada"
+              },
+              {
+                "id": 2,
+                "nome": "Morra pela primeira vez",
+                "XP": 300,
+                "dificuldade": "F\u00E1cil",
+                "status": "Bloqueada"
+              },
+              {
+                "id": 3,
+                "nome": "Destrua 10 ARCS",
+                "XP": 500,
+                "dificuldade": "M\u00E9dio",
+                "status": "Bloqueada"
+              }
+            ]
+          }
+        ]
+      },
+      "id": 2,
+      "nome": "joao",
+      "senha": "1"
+    },
+    {
+      "Nivel": 1,
+      "Experiencia": 0,
+      "biblioteca": {
+        "jogos": []
+      },
+      "id": 3,
+      "nome": "",
+      "senha": ""
+    },
+    {
+      "Nivel": 1,
+      "Experiencia": 0,
+      "biblioteca": {
+        "jogos": []
+      },
+      "id": 4,
+      "nome": "a",
+      "senha": "1"
+    }
+  ],
+  "jogos": [
+    {
+      "id": 1,
+      "nome": "Arc Raiders",
+      "genero": "Extra\u00E7\u00E3o",
+      "plataforma": null,
+      "conquistas": [
+        {
+          "id": 1,
+          "nome": "Volte a Speranza",
+          "XP": 700,
+          "dificuldade": "M\u00E9dio",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 2,
+          "nome": "Morra pela primeira vez",
+          "XP": 300,
+          "dificuldade": "F\u00E1cil",
+          "status": "Bloqueada"
+        },
+        {
+          "id": 3,
+          "nome": "Destrua 10 ARCS",
+          "XP": 500,
+          "dificuldade": "M\u00E9dio",
+          "status": "Bloqueada"
+        }
+      ]
+    }
   ]
 }
