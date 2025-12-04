@@ -155,14 +155,14 @@ Estrutura:
 
 ## Camada de Dados (Dados.cs)
 
-Controla:
+Foi utilizado a biblioteca System.Test.Json como uma forma de salvar todos os dados no arquivo `dados.json`
+
+A camada de dados controla:
 
 - Salvamento e carregamento dos dados
 - Estrutura do armazenamento em BancoDeDados
 
-Componentes principais:
-
-### BancoDeDados
+### classe: BancoDeDados
 
 Agrupa listas de:
 
@@ -170,7 +170,7 @@ Agrupa listas de:
 - usuarios
 - jogos
 
-### Database (static)
+### classe: Database (static)
 
 Gerencia:
 
