@@ -11,13 +11,13 @@ Possui permissões especiais, como registrar novos jogos e definir suas conquist
 Pode montar sua biblioteca, desbloquear conquistas, acumular XP, subir de nível e comparar progresso com outros usuários.
 
 ## Funcionalidades principais:
-###1. Sistema de Login e Cadastro
+### 1. Sistema de Login e Cadastro
 
 - Login com validação de credenciais.
 - Cadastro de novos usuários.
 - Diferenciação automática entre Admin e Usuário.
 
-###2. Funções do Administrador
+### 2. Funções do Administrador
 
 Cadastrar jogos com:
 
@@ -32,7 +32,7 @@ Cadastrar conquistas para cada jogo, contendo:
 - XP
 - Dificuldade
 
-###3. Funções do Usuário
+### 3. Funções do Usuário
 
 - Visualizar sua biblioteca com todos os jogos e suas conquistas.
 - Adicionar jogos cadastrados pelo Admin à sua biblioteca pessoal.
