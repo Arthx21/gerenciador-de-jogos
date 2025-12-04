@@ -176,3 +176,10 @@ Gerencia:
 
 - Carregar() → lê arquivo JSON
 - Salvar() → grava no arquivo
+
+# Diagrama de classes (UML)
+
+Agora vamos apresentar o nosso diagrama de classe do projeto inteiro onde tem a melhor visualização de todo as classes. Segue abaixo o diagrama:
+
+![Diagrama de classes](images/diagramadeclassePOO.png)
+Todo o diagrama foi feito utilizando a ferramenta do Draw.io : https://app.diagrams.net
