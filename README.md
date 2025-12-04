@@ -11,7 +11,7 @@ Admin:
 |:---: |:---: |
 | admin | 1234 |
 
-Usuário teste
+Usuário:
 | **Nome**  | **Senha**  |
 |:---: |:---: |
 | arthur | 123 |
