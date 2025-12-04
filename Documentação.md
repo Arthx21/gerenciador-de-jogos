@@ -52,3 +52,9 @@ O sistema salva todos os dados em arquivo JSON (dados.json):
 - Admins
 - Jogos cadastrados globalmente
 - Bibliotecas individuais com conquistas e status
+
+  # Arquitetura do Sistema
+
+  A imagem a seguir mostra a organização das pastas e o nome de todos os arquivos:
+
+  ![Arquitetura](images/arquitetura.png)
