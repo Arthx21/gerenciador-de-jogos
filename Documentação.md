@@ -87,7 +87,7 @@ Controlar o fluxo entre menus:
 
 Inclui todas as classes principais do projeto.
 
-### Pessoa (classe base)
+### classe: Pessoa (classe base)
 
 Propriedades:
 
@@ -100,7 +100,7 @@ Funções:
 - Login
 - Cadastro de novo usuário
 
-### Admin (herda Pessoa)
+### classe: Admin (herda Pessoa)
 
 Permissões especiais:
 
@@ -109,7 +109,7 @@ Permissões especiais:
   
 Admin é encontrado no banco por nome e senha, optamos por ter um admin fixo temporariamente para facilitar o acesso a área de cadastro de jogos e conquista.
 
-### Usuario (herda Pessoa)
+### classe: Usuario (herda Pessoa)
 
 O usuário contém:
 
@@ -125,7 +125,7 @@ Principais métodos:
 - CompararUsuario()
 - CompararJogoComUsuario()
 
-### BibliotecaUsuario
+### classe: BibliotecaUsuario (associa jogos)
 
 Gerencia os jogos que pertencem a um usuário.
 
@@ -134,7 +134,7 @@ Funções:
 - Buscar jogo por nome
 - Buscar conquista por nome
 
-### Jogo
+### classe: Jogo (associa conquistas)
 
 Estrutura:
 
@@ -143,7 +143,7 @@ Estrutura:
 - genero
 - conquistas
 
-### Conquista
+### classe: Conquista
 
 Estrutura:
 
