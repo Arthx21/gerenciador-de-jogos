@@ -26,7 +26,7 @@ class Programa
             switch (opt)
             {
                 case 1:
-                    Pessoa pessoa = Pessoa.Logar();
+                    Pessoa? pessoa = Pessoa.Logar();
 
                     if (pessoa is Admin)
                     {
@@ -155,9 +155,6 @@ class Programa
             }
         }
     }
-
-
-
 }
 
 

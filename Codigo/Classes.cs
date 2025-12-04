@@ -1,6 +1,71 @@
 namespace Classes
 {
     using Dados;
+
+    class Jogo
+    {
+        public int id;
+        public string? nome;
+        public string? genero;
+
+        public List<Conquista> conquistas = new List<Conquista>();
+        public Jogo() { }
+        public Jogo(int id, string nome, string genero, List<Conquista> conquistas)
+        {
+            this.id = id;
+            this.nome = nome;
+            this.genero = genero;
+            this.conquistas = conquistas;
+        }
+
+    }
+
+    class Conquista
+    {
+        public int id;
+        public string? nome;
+        public int XP;
+        public string? dificuldade;
+        public string? status; // Desbloqueada / Bloqueada
+        public void Desbloquear()
+        {
+            status = "Desbloqueada";
+        }
+
+        public Conquista(int id, string nome, int XP, string dificuldade)
+        {
+            this.id = id;
+            this.nome = nome;
+            this.XP = XP;
+            this.dificuldade = dificuldade;
+            status = "Bloqueada";
+        }
+    }
+
+    class BibliotecaUsuario
+    {
+        public List<Jogo> jogos = new List<Jogo>();
+
+        public BibliotecaUsuario()
+        {
+            jogos = new List<Jogo>();
+        }
+
+
+        public Jogo? BuscarJogoPorNome(string nome)
+        {
+            return jogos
+                .FirstOrDefault(j => j.nome != null && j.nome.Equals(nome, StringComparison.OrdinalIgnoreCase));
+        }
+
+        public Conquista? BuscarConquistaPorNome(Jogo jogo, string nome)
+        {
+            return jogo.conquistas
+                .FirstOrDefault(c => c.nome != null && c.nome.Equals(nome, StringComparison.OrdinalIgnoreCase));
+        }
+
+    }
+
     class Pessoa
     {
         public int id;
@@ -51,14 +116,12 @@ namespace Classes
                 }
             }
 
-            // Verifica login do admin
             Admin? admin = Database.Dados.admins
                 .FirstOrDefault(a => a.nome == nome && a.senha == senha);
 
             if (admin != null)
                 return admin;
 
-            // Verifica login do usuário
             Usuario? usuario = Database.Dados.usuarios
                 .FirstOrDefault(u => u.nome == nome && u.senha == senha);
 
@@ -108,7 +171,6 @@ namespace Classes
                 }
             }
 
-            // Verificar se já existe usuário com esse nome
             if (Database.Dados.usuarios.Any(u => u.nome.Equals(nome, StringComparison.OrdinalIgnoreCase)))
             {
                 Console.WriteLine("Já existe um usuário com esse nome!");
@@ -116,7 +178,6 @@ namespace Classes
                 return;
             }
 
-            // ID automático
             int novoId = (Database.Dados.usuarios.Count > 0)
                 ? Database.Dados.usuarios.Max(u => u.id) + 1
                 : 1;
@@ -435,7 +496,7 @@ namespace Classes
                 {
                     Console.WriteLine($"  > {c.nome} | XP: {c.XP} | Dif: {c.dificuldade} | Status: {c.status}");
                 }
-                
+
             }
 
             Console.WriteLine("===== MARCAR CONQUISTA =====");
@@ -634,73 +695,5 @@ namespace Classes
         }
 
     }
-
-    class Jogo
-    {
-        public int id;
-        public string? nome;
-        public string? genero;
-
-        public List<Conquista> conquistas = new List<Conquista>();
-        public Jogo() { }
-        public Jogo(int id, string nome, string genero, List<Conquista> conquistas)
-        {
-            this.id = id;
-            this.nome = nome;
-            this.genero = genero;
-            this.conquistas = conquistas;
-        }
-
-    }
-
-    class Conquista
-    {
-        public int id;
-        public string? nome;
-        public int XP;
-        public string? dificuldade;
-        public string? status; // Desbloqueada / Bloqueada
-        public void Desbloquear()
-        {
-            status = "Desbloqueada";
-        }
-
-        public Conquista(int id, string nome, int XP, string dificuldade)
-        {
-            this.id = id;
-            this.nome = nome;
-            this.XP = XP;
-            this.dificuldade = dificuldade;
-            status = "Bloqueada";
-        }
-    }
-
-    class BibliotecaUsuario
-    {
-        public List<Jogo> jogos = new List<Jogo>();
-
-        public BibliotecaUsuario()
-        {
-            jogos = new List<Jogo>();
-        }
-
-
-        public Jogo? BuscarJogoPorNome(string nome)
-        {
-            return jogos
-                .FirstOrDefault(j => j.nome != null && j.nome.Equals(nome, StringComparison.OrdinalIgnoreCase));
-        }
-
-        public Conquista? BuscarConquistaPorNome(Jogo jogo, string nome)
-        {
-            return jogo.conquistas
-                .FirstOrDefault(c => c.nome != null && c.nome.Equals(nome, StringComparison.OrdinalIgnoreCase));
-        }
-
-    }
-
-    
-
-
 
 }

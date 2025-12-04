@@ -9,7 +9,7 @@
   "usuarios": [
     {
       "Nivel": 3,
-      "Experiencia": 2010,
+      "Experiencia": 2210,
       "biblioteca": {
         "jogos": [
           {
@@ -162,7 +162,7 @@
                 "nome": "Sem Errar",
                 "XP": 200,
                 "dificuldade": "F\u00E1cil",
-                "status": "Bloqueada"
+                "status": "Desbloqueada"
               }
             ]
           }
