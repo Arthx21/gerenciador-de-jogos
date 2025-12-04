@@ -58,3 +58,121 @@ O sistema salva todos os dados em arquivo JSON (dados.json):
   A imagem a seguir mostra a organização das pastas e o nome de todos os arquivos:
 
   ![Arquitetura](images/arquitetura.png)
+
+ ##  Camada de Aplicação (Program.cs)
+
+É responsável por:
+
+- Carregar o banco de dados ao iniciar.
+- Exibir o menu principal (login, cadastro, sair).
+Controlar o fluxo entre menus:
+- Menu do Admin
+- Menu do Usuário
+
+### Principais métodos:
+
+`Main()`
+
+- Inicia o programa
+- Carrega dados
+- Exibe o menu principal
+
+`TelaPrincipalUsuario(Usuario usuario)`
+- Menu com todas ações do usuário.
+
+`TelaPrincipalAdmin()`
+-Menu para cadastro e gerenciamento de jogos.
+
+## Camada de Domínio (Classes.cs)
+
+Inclui todas as classes principais do projeto.
+
+### Pessoa (classe base)
+
+Propriedades:
+
+- id
+- nome
+- senha
+
+Funções:
+
+- Login
+- Cadastro de novo usuário
+
+### Admin (herda Pessoa)
+
+Permissões especiais:
+
+- Cadastrar jogo (CadastrarJogo)
+- Cadastrar conquista (CadastrarConquista)
+  
+Admin é encontrado no banco por nome e senha, optamos por ter um admin fixo temporariamente para facilitar o acesso a área de cadastro de jogos e conquista.
+
+### Usuario (herda Pessoa)
+
+O usuário contém:
+
+- Sistema de níveis (Nivel)
+- Sistema de experiência (Experiencia)
+- Biblioteca própria (BibliotecaUsuario)
+
+Principais métodos:
+
+- MostrarBiblioteca()
+- AdicionarJogo()
+- MarcarConquista()
+- CompararUsuario()
+- CompararJogoComUsuario()
+
+### BibliotecaUsuario
+
+Gerencia os jogos que pertencem a um usuário.
+
+Funções:
+
+- Buscar jogo por nome
+- Buscar conquista por nome
+
+### Jogo
+
+Estrutura:
+
+- id
+- nome
+- genero
+- conquistas
+
+### Conquista
+
+Estrutura:
+
+- id
+- nome
+- XP
+- dificuldade
+- status (Bloqueada / Desbloqueada)
+
+## Camada de Dados (Dados.cs)
+
+Controla:
+
+- Salvamento e carregamento dos dados
+- Estrutura do armazenamento em BancoDeDados
+
+Componentes principais:
+
+### BancoDeDados
+
+Agrupa listas de:
+
+- admins
+- usuarios
+- jogos
+
+### Database (static)
+
+Gerencia:
+
+- Carregar() → lê arquivo JSON
+- Salvar() → grava no arquivo
